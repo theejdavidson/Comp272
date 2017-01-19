@@ -6,15 +6,25 @@ public class Book {
 	private int pubYear;
 	private int pageNum;
 		
+	//Getter method for returning page number
 	public int getPages() {
 		return pageNum;
 	}
-	public String toString(){
-		return "The number of pages is: " + this.pageNum +" The ";//update after booklist
-	}
-	public void updateBook {
+	
+	//  Constructor for Book object, simply assigns all fields
+	public Book(String title, String author, int pubYear, int pageNum){
+		this.title = title;
+		this.author = author;
 		this.pubYear = pubYear;
 		this.pageNum = pageNum;
 	}
+	
+	//toString method
+	public String toString(){
+		return "The title of the book is: " + this.title + " author: " + this.author + " Number of pages: " + getPages() +" Year of publishing: " + this.pubYear;
+	}
+	public void updateBook(int newPages, int newYear) {
+		pubYear = newYear;
+		pageNum = newPages;
+	}
 }
-
