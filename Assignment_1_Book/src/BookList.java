@@ -7,7 +7,8 @@ public class BookList {
 		private int maxBooks;
 		private int howManyBooks = bookList.size();
 		
-		
+	
+	public 	
 	public String getListName() {
 		return listName;
 	}
