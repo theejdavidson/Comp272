@@ -2,31 +2,30 @@ import java.util.ArrayList;
 
 public class BookList {
 		
-		private ArrayList<Book> bookList;
+		//private ArrayList<Book> bookList;
 		private String listName;
 		private int maxBooks;
-		private int howManyBooks;
 		
-		public String getListName() {
-			return listName;
-		}
+
 		
 		//constructor taking input of list name and max books
-		public BookList(ArrayList<Book> bookList, String listName, int maxBooks, int howManyBooks){
-			this.bookList = bookList;
+		public BookList(String listName, int maxBooks){
+			//this.bookList = bookList;
 			this.listName = listName;
 			this.maxBooks = maxBooks;//change constructor to create method (if statement?) for a maximum number of books on the list
-			this.howManyBooks = bookList.size();
 		}
-	
+	//accessor that returns the name of current list
+	public String getListName() {
+			return listName;
+		}
 	public void addBook(Book b) {
-		bookList.add(b);
+		BookList.add(b);
 	}
 	public int numberOfBooks(){
-		return howManyBooks;
+		return bookList.size();
 	}
-	public boolean isOnList(){
-		if(bookList.equals()){
+	public boolean isOnList(Book a){
+		if(bookList.contains(a)){
 			return true;
 		}
 		return false;
