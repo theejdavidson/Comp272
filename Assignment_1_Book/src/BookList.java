@@ -5,13 +5,20 @@ public class BookList {
 		private ArrayList<Book> bookList;
 		private String listName;
 		private int maxBooks;
-		private int howManyBooks = bookList.size();
+		private int howManyBooks;
 		
+		public String getListName() {
+			return listName;
+		}
+		
+		//constructor taking input of list name and max books
+		public BookList(ArrayList<Book> bookList, String listName, int maxBooks, int howManyBooks){
+			this.bookList = bookList;
+			this.listName = listName;
+			this.maxBooks = maxBooks;//change constructor to create method (if statement?) for a maximum number of books on the list
+			this.howManyBooks = bookList.size();
+		}
 	
-	public 	
-	public String getListName() {
-		return listName;
-	}
 	public void addBook(Book b) {
 		bookList.add(b);
 	}
