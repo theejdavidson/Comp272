@@ -5,8 +5,41 @@ public class Student extends Person {
 	private int gradYear;
 	
 	
-	public Student(String name, int social, int age, String gender) {
-		super(name, social, age, gender);
+	public Student(float newGpa, String newMajor, int newGradYear, String newName, int newSocial, int newAge, String newGender) {
+		super(newName, newSocial, newAge, newGender);
+		setGpa(newGpa);
+		setMajor(newMajor);
+		setGradYear(newGradYear);
+	}
+
+
+	public float getGpa() {
+		return gpa;
+	}
+
+
+	public void setGpa(float gpa) {
+		this.gpa = gpa;
+	}
+
+
+	public String getMajor() {
+		return major;
+	}
+
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+
+	public int getGradYear() {
+		return gradYear;
+	}
+
+
+	public void setGradYear(int gradYear) {
+		this.gradYear = gradYear;
 	}
 	
 }
