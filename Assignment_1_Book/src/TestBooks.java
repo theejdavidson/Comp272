@@ -64,7 +64,7 @@ public class TestBooks {
 	}
 	else{
 		System.out.println("There are no books by Edsger Dijikstra on " + wishList.getListName());
-	}
+	} 
 	//prints updated version of both my books and wishlist, with additional books in each list specified above in file
 	System.out.println();
 	System.out.println("Updated Book Lists: ");

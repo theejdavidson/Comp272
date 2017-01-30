@@ -6,8 +6,12 @@ public class Pirate extends Person {
 	private float cannonAccuracy;
 	private Boolean parrot;
 	
-	public Pirate(String name, int social, int age, String gender) {
-		super(name, social, age, gender);
+	public Pirate(int newVillage, String newShip, float newAccuracy, Boolean newParrot, String newName, int newSocial, int newAge, String newGender, int newPhone, String newAddress) {
+		super(newName, newSocial, newAge, newGender, newPhone, newAddress);
+		setVillages(newVillage);
+		setShipName(newShip);
+		setCannonAccuracy(newAccuracy);
+		setParrot(newParrot);
 	}
 
 	public int getVillages() {
@@ -41,5 +45,9 @@ public class Pirate extends Person {
 	public void setParrot(Boolean parrot) {
 		this.parrot = parrot;
 	}
+	
+	public String toString(){
+		return super.toString() + " // Villages Pillaged: " + getVillages() + " // Ship name:" + getShipName() + " // Cannon firing accuracy: " + getCannonAccuracy() + " // Has parrot: " + getParrot() + "/n";
+	}	
 	
 }

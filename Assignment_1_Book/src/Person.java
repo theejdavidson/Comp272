@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Person {
 	
-	
+	//Declares variables
 	private String name;
 	private int social;
 	private int age;
@@ -11,11 +11,11 @@ public class Person {
 	private ArrayList<String> address;
 	
 	//  Constructor for Person object, simply assigns all fields
-	public Person(String name, int social, int age, String gender) {
-		this.name = name;
-		this.social = social;
-		this.age = age;
-		this.gender = gender;
+	public Person(String newName, int newSocial, int newAge, String newGender) {
+		name = newName;
+		social = newSocial;
+		age = newAge;
+		gender = newGender;
 		phoneNum = new ArrayList<Integer>();
 		address = new ArrayList<String>();
 		
@@ -43,13 +43,14 @@ public class Person {
 	public String toString(){
 		return "";
 	}
-	
+	//allows changes to variables pertaining to person superclass
 	public void updatePerson(String newName, int newSocial, int newAge, String newGender) {
 		name = newName;
 		social = newSocial;
 		age = newAge;
 		gender = newGender;
 	}
+	//methods to add and remove phone numbers and addresses from respective arraylists
 	public void addPhone(int newPhone) {
 		phoneNum.add(newPhone);
 	}

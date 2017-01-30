@@ -5,8 +5,8 @@ public class Employee extends Person {
 	private String job;
 	private int year;
 	
-	public Employee(String newDept, String newJob, int newYear, String newName, int newSocial, int newAge, String newGender) {
-		super(newName, newSocial, newAge, newGender);
+	public Employee(String newDept, String newJob, int newYear, String newName, int newSocial, int newAge, String newGender, int newPhone, String newAddress) {
+		super(newName, newSocial, newAge, newGender, newPhone, newAddress);
 		setDept(newDept);
 		setJob(newJob);
 		setYear(newYear);
@@ -35,5 +35,7 @@ public class Employee extends Person {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	
+	public String toString(){
+		return super.toString() + " // Job Department: " + getDept() + " // Job Title: " + getJob() + " // Year hired: " + getYear();
+	}
 }
